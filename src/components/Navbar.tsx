@@ -17,7 +17,7 @@ const Navbar = ({ onSectionChange }: { onSectionChange: (section: string) => voi
             <button
               key={section}
               onClick={() => handleSectionChange(section)}
-              className={`nav-link ${activeSection === section ? "active" : ""}`}
+              className={`nav-link ${activeSection === section ? "active rounded-2xl" : "rounded-lg"}`}
             >
               {section}
             </button>
