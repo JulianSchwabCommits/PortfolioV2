@@ -1,3 +1,5 @@
+import ProjectCard from "./ProjectCard";
+
 const ExperienceTimeline = () => {
   const experiences = [
     {
