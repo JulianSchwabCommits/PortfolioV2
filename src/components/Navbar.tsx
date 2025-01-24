@@ -17,7 +17,9 @@ const Navbar = ({ onSectionChange }: { onSectionChange: (section: string) => voi
             <button
               key={section}
               onClick={() => handleSectionChange(section)}
-              className={`nav-link ${activeSection === section ? "active rounded-full" : "rounded-full"}`}
+              className={`nav-link h-10 px-6 flex items-center justify-center ${
+                activeSection === section ? "active rounded-full" : "rounded-full"
+              }`}
             >
               {section}
             </button>

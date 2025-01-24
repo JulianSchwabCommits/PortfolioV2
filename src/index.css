@@ -13,7 +13,7 @@ body {
 }
 
 .nav-link {
-  @apply px-4 py-2 rounded-md hover:bg-accent/20 transition-all duration-200;
+  @apply aspect-auto hover:bg-accent/20 transition-all duration-200;
 }
 
 .nav-link.active {
