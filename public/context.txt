@@ -1,0 +1,9 @@
+Julian Schwab is a software developer specializing in web development.
+He has experience in React, TypeScript, Node.js, and other modern web technologies.
+Julian graduated from [University Name] with a degree in Computer Science.
+He has worked at [Company Names] doing [specific work].
+His projects include [Project Names and descriptions].
+Julian is passionate about [interests related to development].
+In his free time, he enjoys [hobbies].
+He is based in [Location].
+He is currently looking for opportunities in [specific roles or industries].
