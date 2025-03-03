@@ -42,7 +42,7 @@ export default function MouseShadow() {
 
   return (
     <div 
-      className="pointer-events-none fixed z-50 transition-all duration-300 ease-out"
+      className="pointer-events-none fixed z-[5] transition-all duration-300 ease-out"
       style={{ 
         left: `${position.x}px`, 
         top: `${position.y}px`,
