@@ -110,56 +110,78 @@ Use the above information to answer user questions. If you don't know the answer
 
   return (
     <div className="min-h-screen pt-24 px-4">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className="font-display text-4xl mb-8 animate-fade-in">Let's Chat</h2>
-        <div className="bg-accent/10 rounded-lg p-4 h-[500px] flex flex-col">
-          <div className="flex-1 overflow-y-auto space-y-4 mb-4">
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className={`max-w-[80%] p-3 rounded-lg ${
-                    message.isUser
-                      ? "bg-accent/20 rounded-tr-none"
-                      : "bg-accent/40 rounded-tl-none"
-                  }`}
-                >
-                  {message.text}
-                </div>
-              </div>
-            ))}
-            {isLoading && (
-              <div className="flex justify-start">
-                <div className="max-w-[80%] p-3 rounded-lg bg-accent/40 rounded-tl-none">
-                  <span className="inline-block animate-pulse">Thinking...</span>
-                </div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
+        
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Profile Image Section */}
+          <div className="md:w-1/3 flex flex-col items-center">
+            <div className="rounded-lg overflow-hidden mb-4 shadow-lg">
+              <img 
+                src="/MeButSmaller-BW.jpg" 
+                alt="Julian Schwab" 
+                className="w-full h-auto object-cover transition-all duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="bg-accent/10 p-4 rounded-lg w-full">
+              <h3 className="font-display text-xl mb-2">Julian Schwab</h3>
+              <p className="text-sm opacity-80">Software Developer Apprentice</p>
+              <p className="text-sm opacity-80">Zürich, Switzerland</p>
+            </div>
           </div>
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSend()}
-              placeholder="Type your message..."
-              className="flex-1 bg-accent/20 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent/40"
-              disabled={isLoading}
-            />
-            <button
-              onClick={handleSend}
-              className={`p-2 rounded-lg transition-colors ${
-                isLoading 
-                  ? "bg-accent/10 cursor-not-allowed" 
-                  : "bg-accent/20 hover:bg-accent/40"
-              }`}
-              disabled={isLoading}
-            >
-              <Send size={20} />
-            </button>
+          
+          {/* Chat Section */}
+          <div className="md:w-2/3">
+            <div className="bg-accent/10 rounded-lg p-4 h-[500px] flex flex-col">
+              <div className="flex-1 overflow-y-auto space-y-4 mb-4">
+                {messages.map((message, index) => (
+                  <div
+                    key={index}
+                    className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}
+                  >
+                    <div
+                      className={`max-w-[80%] p-3 rounded-lg ${
+                        message.isUser
+                          ? "bg-accent/20 rounded-tr-none"
+                          : "bg-accent/40 rounded-tl-none"
+                      }`}
+                    >
+                      {message.text}
+                    </div>
+                  </div>
+                ))}
+                {isLoading && (
+                  <div className="flex justify-start">
+                    <div className="max-w-[80%] p-3 rounded-lg bg-accent/40 rounded-tl-none">
+                      <span className="inline-block animate-pulse">Thinking...</span>
+                    </div>
+                  </div>
+                )}
+                <div ref={messagesEndRef} />
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyPress={(e) => e.key === "Enter" && handleSend()}
+                  placeholder="Type your message..."
+                  className="flex-1 bg-accent/20 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent/40"
+                  disabled={isLoading}
+                />
+                <button
+                  onClick={handleSend}
+                  className={`p-2 rounded-lg transition-colors ${
+                    isLoading 
+                      ? "bg-accent/10 cursor-not-allowed" 
+                      : "bg-accent/20 hover:bg-accent/40"
+                  }`}
+                  disabled={isLoading}
+                >
+                  <Send size={20} />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
