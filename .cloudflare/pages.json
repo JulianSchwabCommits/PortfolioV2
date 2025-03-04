@@ -1,0 +1,9 @@
+{
+  "build": {
+    "command": "npm install && npm run build",
+    "output_directory": "dist",
+    "environment": {
+      "NODE_VERSION": "18.17.1"
+    }
+  }
+}

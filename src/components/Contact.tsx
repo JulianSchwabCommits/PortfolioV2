@@ -116,14 +116,14 @@ Use the above information to answer user questions. If you don't know the answer
         <div className="flex flex-col md:flex-row gap-8">
           {/* Profile Image Section */}
           <div className="md:w-1/3 flex flex-col items-center">
-            <div className="rounded-lg overflow-hidden mb-4 shadow-lg">
+            <div className="rounded-lg overflow-hidden mb-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] z-10 hover:z-20">
               <img 
                 src="/MeButSmaller-BW.jpg" 
                 alt="Julian Schwab" 
                 className="w-full h-auto object-cover transition-all duration-300 hover:scale-105"
               />
             </div>
-            <div className="bg-accent/10 p-4 rounded-lg w-full">
+            <div className="bg-accent/10 p-4 rounded-lg w-full hover:shadow-lg transition-all duration-300 hover:scale-[1.02] z-10 hover:z-20">
               <h3 className="font-display text-xl mb-2">Julian Schwab</h3>
               <p className="text-sm opacity-80">Software Developer Apprentice</p>
               <p className="text-sm opacity-80">Zürich, Switzerland</p>
@@ -132,7 +132,7 @@ Use the above information to answer user questions. If you don't know the answer
           
           {/* Chat Section */}
           <div className="md:w-2/3">
-            <div className="bg-accent/10 rounded-lg p-4 h-[500px] flex flex-col">
+            <div className="bg-accent/10 rounded-lg p-4 h-[500px] flex flex-col hover:shadow-lg transition-all duration-300 hover:scale-[1.01] z-10 hover:z-20">
               <div className="flex-1 overflow-y-auto space-y-4 mb-4">
                 {messages.map((message, index) => (
                   <div

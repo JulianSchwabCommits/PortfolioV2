@@ -6,7 +6,7 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row gap-12 animate-fade-in">
           {/* Text content */}
-          <div className="md:w-2/3 space-y-6">
+          <div className="md:w-2/3 space-y-6 bg-accent/5 p-6 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-[1.01] z-10 hover:z-20">
             <p className="text-lg">
               Hi, I'm Julian Schwab, an Application Developer at Swisscom. I'm passionate about creating elegant solutions to complex problems and bringing innovative ideas to life through code.
             </p>
@@ -20,7 +20,7 @@ const About = () => {
           
           {/* Image section */}
           <div className="md:w-1/3">
-            <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] z-10 hover:z-20">
               <img 
                 src="/MeButSmaller-BW.jpg" 
                 alt="Julian Schwab" 

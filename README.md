@@ -1,69 +1,97 @@
-# Welcome to your Lovable project
+# Julian Schwab's Portfolio
 
-## Project info
+A modern, interactive portfolio website built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/eb85a4f6-1e02-4399-aa91-389cb8fc62de
+## Features
 
-## How can I edit this code?
+- Interactive UI with custom mouse effects
+- Dynamic sections for work experience, about, and contact
+- AI-powered chatbot for personalized interactions
+- Responsive design for all device sizes
 
-There are several ways of editing your application.
+## Setup Guide
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/eb85a4f6-1e02-4399-aa91-389cb8fc62de) and start prompting.
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Step 1: Clone the Repository
 
-**Use your preferred IDE**
+```bash
+git clone https://github.com/JulianSchwabCommits/PortfolioV2.git
+cd PortfolioV2
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Step 2: Install Dependencies
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+npm install
+```
 
-Follow these steps:
+### Step 3: Set Up Environment Variables
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Create a `.env` file in the root directory (if needed for API keys or other sensitive information):
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```
+# API Keys
+VITE_OPENROUTER_API_KEY=your_openrouter_api_key
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Step 4: Start Development Server
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+This will start the development server at `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Step 5: Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The production build will be available in the `dist` directory.
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with .
+- `src/` - Source code
+  - `components/` - React components
+  - `pages/` - Page components
+  - `lib/` - Utility functions
+  - `hooks/` - Custom React hooks
+- `public/` - Static assets and data
+  - `context.json` - Data for the AI assistant
 
-- Vite
-- TypeScript
+## Deployment
+
+This project is configured for deployment on Cloudflare Pages. When pushing to the main branch, the site will automatically deploy.
+
+### Manual Deployment
+
+To deploy manually:
+
+1. Build the project: `npm run build`
+2. Deploy to Cloudflare Pages using the Cloudflare Dashboard or CLI
+
+## Technologies Used
+
 - React
-- shadcn-ui
+- TypeScript
+- Vite
 - Tailwind CSS
+- OpenRouter API for AI capabilities
 
-## How can I deploy this project?
+## Customization
 
-Simply open [Lovable](https://lovable.dev/projects/eb85a4f6-1e02-4399-aa91-389cb8fc62de) and click on Share -> Publish.
+To customize the portfolio with your information:
 
-## I want to use a custom domain - is that possible?
+1. Update personal details in `src/components/About.tsx`
+2. Modify project experiences in `src/components/ExperienceTimeline.tsx`
+3. Update the AI context in `public/context.json` with your information
+4. Replace images in the `public/` directory with your own
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## License
+
+MIT
